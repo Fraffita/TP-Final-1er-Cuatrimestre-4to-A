@@ -11,6 +11,7 @@ public class PlayerActions : MonoBehaviour
     bool tocado;
     float timer;
     float StartTime;
+    float TimerStart;
 
 
     void Start()
@@ -18,19 +19,21 @@ public class PlayerActions : MonoBehaviour
         PanelFinal.SetActive(false);
         StartTime = 0;
 
+        TimerStart = 0;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             StartTime = StartTime + 1;
-
             if (StartTime == 1)
             {
-                Tiempo.text = timer.ToString();
-                timer = Time.deltaTime;
+                TimerStart = Time.time;
+                PanelFinal.SetActive(false);
             }
+
+            
         }
     }
 
@@ -40,6 +43,8 @@ public class PlayerActions : MonoBehaviour
         {
             PanelFinal.SetActive(true);
             tocado = true;
+            Tiempo.text = "Tardaste "+(Mathf.FloorToInt(Time.time) - TimerStart).ToString()+" segundos";
+            
 
         }
     }
