@@ -13,7 +13,7 @@ public class AudioFondo : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.C))
         {
             isplaying = isplaying +1;
 

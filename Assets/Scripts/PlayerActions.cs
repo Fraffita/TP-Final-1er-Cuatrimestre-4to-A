@@ -5,9 +5,20 @@ using UnityEngine.UI;
 
 public class PlayerActions : MonoBehaviour
 {
+    //Estructuras de bloqueo
+    public GameObject BloqueoN1;
+    public GameObject BloqueoN2;
+    public GameObject BloqueoN3;
+
+
+    //Bases de niveles
+    public GameObject baseN2;
+    public GameObject baseN3;
+
     public GameObject baseFinal;
     public GameObject PanelFinal;
     public Text Tiempo;
+
     bool tocado;
     float timer;
     float StartTime;
@@ -33,7 +44,6 @@ public class PlayerActions : MonoBehaviour
                 PanelFinal.SetActive(false);
             }
 
-            
         }
     }
 
@@ -44,9 +54,12 @@ public class PlayerActions : MonoBehaviour
             PanelFinal.SetActive(true);
             tocado = true;
             Tiempo.text = "Tardaste "+(Mathf.FloorToInt(Time.time) - TimerStart).ToString()+" segundos";
-            
-
         }
+
+        //if (collision.gameObject.tag == "baseN2" && tocado == false)
+        //{
+        //    tocado = true;
+        //}
     }
 
    
