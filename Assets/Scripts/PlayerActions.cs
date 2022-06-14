@@ -17,6 +17,7 @@ public class PlayerActions : MonoBehaviour
 
     public GameObject baseFinal;
     public GameObject PanelFinal;
+    public GameObject PanelInicio;
     public Text Tiempo;
 
     bool tocado;
@@ -28,6 +29,7 @@ public class PlayerActions : MonoBehaviour
     void Start()
     {
         PanelFinal.SetActive(false);
+        PanelInicio.SetActive(true);
         StartTime = 0;
 
         TimerStart = 0;
@@ -41,7 +43,7 @@ public class PlayerActions : MonoBehaviour
             if (StartTime == 1)
             {
                 TimerStart = Time.time;
-                PanelFinal.SetActive(false);
+                PanelInicio.SetActive(false);
             }
 
         }
