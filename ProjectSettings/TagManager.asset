@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - baseN2
+  - baseFinal
+  - escalon
+  - Lava
+  - Lava1
+  - Lava2
   layers:
   - Default
   - TransparentFX

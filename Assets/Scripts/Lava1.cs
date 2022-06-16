@@ -10,9 +10,12 @@ public class Lava1 : MonoBehaviour
     private bool Isdead = false;
     public GameObject Escalones;
     public float RangoCreacion = 14f;
+
+    public int caidasN2;
     float posX;
     void Start()
     {
+        caidasN2 = 0;
         source = GetComponent<AudioSource>();
     }
 
@@ -22,6 +25,7 @@ public class Lava1 : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Isdead = true;
+            caidasN2 = caidasN2 + 1;
             if (Isdead)
             {
 

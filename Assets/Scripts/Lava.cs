@@ -8,12 +8,15 @@ public class Lava : MonoBehaviour
     public GameObject PlayerSpawnPosition;
     private bool Isdead = false;
 
+    public int caidasN1;
+
     public GameObject Escalones;
     public float RangoCreacion = 14f;
 
     float posZ;
     private void Start()
     {
+        caidasN1 = 0;
         source = GetComponent<AudioSource>();
     }
     private void OnCollisionEnter(Collision collision)
@@ -22,6 +25,8 @@ public class Lava : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Isdead = true;
+            caidasN1 ++;
+
             if (Isdead){
 
                 source.Play();
