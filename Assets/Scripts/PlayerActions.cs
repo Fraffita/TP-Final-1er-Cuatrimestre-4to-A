@@ -88,7 +88,7 @@ public class PlayerActions : MonoBehaviour
            
             for (int i = 0; i < caidas_T; i++)
             {
-                Instantiate(pelotita, new Vector3(posX, 11.99f, posZ), Quaternion.identity);
+                Instantiate(pelotita, new Vector3(23.39f, 3.46f, 82.1f), Quaternion.identity);
 
             }
         }
